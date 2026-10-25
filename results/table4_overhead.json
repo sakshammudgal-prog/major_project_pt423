@@ -1,0 +1,16 @@
+{
+  "Round time, plain FL (ms)": 2.9515608566687965,
+  "Round time, framework (ms)": 8.179998383336056,
+  "Overhead per round (ms)": 5.228437526667259,
+  "  of which block commit, 3 replicas (ms)": 3.6351523933325325,
+  "  of which client hash + sign (ms)": 0.3062679200019148,
+  "  of which contract checks (ms)": 0.4673171866617547,
+  "  of which screening + digest verify (ms)": 0.4402460966667832,
+  "Block validation per replica (ms)": 1.1907147366659072,
+  "Signed submit transaction (B)": 366.2,
+  "Serialized model update, off-chain (B)": 376,
+  "Mean block size per round (B)": 2776.9800000000005,
+  "Ledger after 30 rounds (B)": 84678.3,
+  "Hash-chain + Merkle audit of the chain (ms)": 1.6896219999978257,
+  "Full audit incl. every signature (ms)": 33.90431519999879
+}

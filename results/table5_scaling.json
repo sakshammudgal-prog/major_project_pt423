@@ -1,0 +1,32 @@
+[
+  {
+    "params": 1000,
+    "offchain_bytes": 8128,
+    "onchain_tx_bytes": 364,
+    "hash_sign_ms": 0.050976500006072456
+  },
+  {
+    "params": 10000,
+    "offchain_bytes": 80128,
+    "onchain_tx_bytes": 366,
+    "hash_sign_ms": 0.12874199998691438
+  },
+  {
+    "params": 100000,
+    "offchain_bytes": 800128,
+    "onchain_tx_bytes": 368,
+    "hash_sign_ms": 0.8096415000125035
+  },
+  {
+    "params": 1000000,
+    "offchain_bytes": 8000128,
+    "onchain_tx_bytes": 366,
+    "hash_sign_ms": 7.516560999988542
+  },
+  {
+    "params": 10000000,
+    "offchain_bytes": 80000128,
+    "onchain_tx_bytes": 366,
+    "hash_sign_ms": 134.39055099996722
+  }
+]

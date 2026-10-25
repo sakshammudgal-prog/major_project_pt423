@@ -1,0 +1,90 @@
+[
+  {
+    "id": "S1",
+    "scenario": "Unregistered client submits an update",
+    "mechanism": "registry check",
+    "detected": 10,
+    "trials": 10,
+    "recorded": 10,
+    "reasons": [
+      "R1: signer not registered"
+    ]
+  },
+  {
+    "id": "S2",
+    "scenario": "Attacker signs as Hospital A with own key",
+    "mechanism": "ECDSA signature check",
+    "detected": 10,
+    "trials": 10,
+    "recorded": 10,
+    "reasons": [
+      "R2: invalid signature"
+    ]
+  },
+  {
+    "id": "S3",
+    "scenario": "Replay of Hospital A's previous-round tx",
+    "mechanism": "round binding",
+    "detected": 10,
+    "trials": 10,
+    "recorded": 10,
+    "reasons": [
+      "R4: not for the open round"
+    ]
+  },
+  {
+    "id": "S4",
+    "scenario": "Duplicate submission in the same round",
+    "mechanism": "one-per-round rule",
+    "detected": 10,
+    "trials": 10,
+    "recorded": 10,
+    "reasons": [
+      "R5: duplicate submission in round"
+    ]
+  },
+  {
+    "id": "S5",
+    "scenario": "Malformed submission (negative count)",
+    "mechanism": "input validation",
+    "detected": 10,
+    "trials": 10,
+    "recorded": 10,
+    "reasons": [
+      "R6: sample count must be a positive integer"
+    ]
+  },
+  {
+    "id": "S6",
+    "scenario": "Stored update modified after hashing",
+    "mechanism": "off-chain hash binding",
+    "detected": 10,
+    "trials": 10,
+    "recorded": 10,
+    "reasons": [
+      "off-chain digest mismatch"
+    ]
+  },
+  {
+    "id": "S7",
+    "scenario": "One replica edited, no re-hashing",
+    "mechanism": "hash-chain / Merkle audit",
+    "detected": 10,
+    "trials": 10,
+    "recorded": 10,
+    "reasons": [
+      "block 5: Merkle root mismatch"
+    ]
+  },
+  {
+    "id": "S8",
+    "scenario": "One replica edited, full re-hashing",
+    "mechanism": "replica comparison + signature",
+    "detected": 10,
+    "trials": 10,
+    "recorded": 10,
+    "reasons": [
+      "replica vote=True; signature=True"
+    ]
+  }
+]

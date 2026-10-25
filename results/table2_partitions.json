@@ -1,0 +1,30 @@
+{
+  "iid": {
+    "Hospital A": [
+      101,
+      42
+    ],
+    "Hospital B": [
+      202,
+      69
+    ],
+    "Hospital C": [
+      152,
+      59
+    ]
+  },
+  "noniid": {
+    "Hospital A": [
+      191,
+      1
+    ],
+    "Hospital B": [
+      133,
+      82
+    ],
+    "Hospital C": [
+      131,
+      87
+    ]
+  }
+}
