@@ -20,20 +20,6 @@ python calibrate.py                 # choose kappa on calibration seeds 100-104
 Results land in `results/` (`RESULTS.md`, one JSON per table, `fig2/3/4*.png`).
 Run one experiment with e.g. `python run_experiments.py poisoning --seeds 3`.
 
-## Layout
-
-| File | Paper section | What it does |
-|---|---|---|
-| `bcfl/crypto.py` | IV-B | SHA-256, canonical JSON, ECDSA P-256 keys/signatures |
-| `bcfl/ledger.py` | IV-B, Table I | signed txs, Merkle root, hash-chained blocks, replicas, audit, replica vote |
-| `bcfl/contract.py` | IV-C | registry, round state, rules **R1–R6**, `rejected` / `validation` records |
-| `bcfl/offchain.py` | IV-A | content-addressed store for serialized updates |
-| `bcfl/data.py` | V-A | WDBC, stratified 20 % test split, IID 2:4:3, Dirichlet α = 0.5, federated standardisation |
-| `bcfl/model.py` | V-B | 31-parameter L2 logistic regression, mini-batch SGD, metrics |
-| `bcfl/framework.py` | IV-D, IV-E | hospitals, network, aggregator, norm screening (Eq. 1), weighted FedAvg (Eq. 2), round protocol, recomputation |
-| `bcfl/attacks.py` | VI-C | protocol attacks **S1–S8** |
-| `run_experiments.py` | VI | Tables II–VII |
-| `make_figures.py` | VI | Figs. 2–4 |
 
 ### Round protocol (`framework.run_federated`)
 1. Consortium stores `w_t` off-chain and writes `open_round(t, digest)`.
@@ -48,7 +34,6 @@ the published digest.
 
 ## Reproduced results (10 seeds, this code) vs. the paper
 
-| Quantity | Paper | This code |
 |---|---|---|
 | IID accuracy, FL = BC-FL audit = BC-FL screen | 97.37 ± 1.24 | 97.46 ± 1.27 |
 | Centralized accuracy | 97.19 ± 1.61 | 97.19 ± 1.61 |
