@@ -2,7 +2,6 @@
 
 Reference implementation for *"Auditable Federated Learning for Multi-Hospital Diagnosis Using
 a Permissioned Blockchain: Design and Evaluation of Accountability, Overhead and Robustness"*
-(Mudgal, Tyagi, Solanki, Mandal, Garg — IILM University).
 
 Three simulated hospitals train a breast-cancer classifier with federated averaging. A
 replicated, permissioned ledger records who took part, signed SHA-256 digests of every model
@@ -74,13 +73,13 @@ Exact timings depend on the machine. Where the numbers differ, it is for these r
 * **Gaussian noise** is σ = 1 per coordinate. The paper does not state σ; change it in
   `Hospital.local_update`.
 
-## Assumptions and limits (same as the paper)
+## Assumptions and limits
 Single process, single ordering role, no network transport, so timings are lower bounds.
 Honest registration, an honest replica majority and secret private keys are assumed.
 The aggregator is checked after the fact by recomputation, not proven correct. There is no
 differential privacy or secure aggregation.
 
-## Next steps (paper's future work)
+## Next steps
 * Port `contract.py` to Hyperledger Fabric chaincode (rules R1–R6 map one-to-one).
 * Replace `model.py` with a CNN on chest X-rays. The ledger code does not change, because only digests go on-chain.
 * Add Krum / trimmed-mean in `Aggregator.aggregate`, and DP noise in `Hospital.local_update`.
